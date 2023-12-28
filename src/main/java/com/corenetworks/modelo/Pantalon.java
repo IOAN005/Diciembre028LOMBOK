@@ -1,6 +1,13 @@
 package com.corenetworks.modelo;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 
 public class Pantalon extends Ropa implements Serializable {
     private String tipoPantalon;
@@ -9,33 +16,10 @@ public class Pantalon extends Ropa implements Serializable {
 
     }
 
-    @Override
-    public String toString() {
-        return "Pantalon{" +
-                "tipoPantalon='" + tipoPantalon + '\'' +
-                ", precio=" + precio +
-                ", proveedor='" + proveedor + '\'' +
-                ", numPrendas=" + numPrendas +
-                '}';
-    }
-
-    public Pantalon() {
-    }
-
-    public Pantalon(String tipoPantalon) {
-        this.tipoPantalon = tipoPantalon;
-    }
-
     public Pantalon(double precio, String proveedor, int numPrendas, String tipoPantalon) {
         super(precio, proveedor, numPrendas);
         this.tipoPantalon = tipoPantalon;
     }
 
-    public String getTipoPantalon() {
-        return tipoPantalon;
-    }
 
-    public void setTipoPantalon(String tipoPantalon) {
-        this.tipoPantalon = tipoPantalon;
-    }
 }
